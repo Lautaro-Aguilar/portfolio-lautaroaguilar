@@ -5,6 +5,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import ThemeSwitch from "@/components/theme-switch";
 import Header from "@/components/header";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,6 +35,8 @@ export default function RootLayout({
         >
           <Header />
           {children}
+
+          <Toaster position="top-right" />
           <ThemeSwitch />
         </ThemeProvider>
       </body>
