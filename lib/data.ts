@@ -45,3 +45,22 @@ export const projectsData = [
     imageUrl: "https://via.placeholder.com/150",
   },
 ] as const;
+
+export const skillsData = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "Next.js",
+  "Node.js",
+  "Git",
+  "Tailwind",
+  "Prisma",
+  "MongoDB",
+  "GraphQL",
+  "Apollo",
+  "Express",
+  "PostgreSQL",
+  "Framer Motion",
+] as const;
