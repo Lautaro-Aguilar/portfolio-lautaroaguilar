@@ -20,16 +20,18 @@ export default function Experience() {
 
   if (!isClient) {
     return (
-      <section
-        id="experience"
-        ref={ref}
-        className="scroll-mt-28 mb-28 sm:mb-40"
-      >
-        <SectionHeading>My experience</SectionHeading>
-        {[...Array(3)].map((_, index) => (
-          <Skeleton className="h-64" key={index} />
-        ))}
-      </section>
+      <div className="h-[700px] w-full mt-8 relative ">
+        <Skeleton className="h-full bg-black/30 z-[1] w-[.5rem] mx-auto" />
+
+        <Skeleton className="absolute top-[15%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[5rem] h-[5rem] rounded-full z-20 bg-black/30" />
+        <Skeleton className="absolute top-[15%] left-[54%] w-[460px] h-[175px] bg-black/30 transform  -translate-y-1/2" />
+
+        <Skeleton className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[5rem] h-[5rem] rounded-full z-20  bg-black/30" />
+        <Skeleton className="absolute top-1/2 right-[54%] w-[460px] h-[175px] bg-black/30 transform  -translate-y-1/2" />
+
+        <Skeleton className="absolute top-[85%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[5rem] h-[5rem] rounded-full z-20 bg-black/30" />
+        <Skeleton className="absolute top-[85%] left-[54%] w-[460px] h-[175px] bg-black/30 transform  -translate-y-1/2" />
+      </div>
     );
   }
 
