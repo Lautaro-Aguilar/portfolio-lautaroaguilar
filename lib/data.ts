@@ -166,20 +166,20 @@ export const skillsData = [
 
 export const experiencesData = [
   {
-    title: "React Front-end Developer",
-    location: "Entre Ríos, Argentina",
-    description:
-      "Transformed legacy .NET systems to React, boosting performance. Upgraded websites for SEO. Adept in agile methodologies. Successfully migrated outdated .NET program to a progressive web app. Demonstrated versatility in various projects.",
-    icon: LuGraduationCap,
-    date: "2020",
-  },
-  {
     title: "Full-Stack Developer",
     location: "Gualeguaychú, Argentina",
     description:
       "Transformed e-commerce UI for optimal user experience. Integrated secure Stripe payments and automated order tracking. Created efficient custom API with Next.js. Achieved seamless mobile-desktop responsiveness, 20% conversion boost, and high-performance site. Collaborated in agile team for timely feature delivery. (Due to space constraints, detailed descriptions of additional projects are not included in this summary)",
     icon: CgWorkAlt,
     date: "2020 - 2024",
+  },
+  {
+    title: "React Front-end Developer",
+    location: "Entre Ríos, Argentina",
+    description:
+      "Transformed legacy .NET systems to React, boosting performance. Upgraded websites for SEO. Adept in agile methodologies. Successfully migrated outdated .NET program to a progressive web app. Demonstrated versatility in various projects.",
+    icon: LuGraduationCap,
+    date: "2020 - Present",
   },
   {
     title: "Full-Stack Developer",
