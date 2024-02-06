@@ -166,20 +166,20 @@ export const skillsData = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
+    title: "React Front-end Developer",
     location: "Entre Ríos, Argentina",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "Transformed legacy .NET systems to React, boosting performance. Upgraded websites for SEO. Adept in agile methodologies. Successfully migrated outdated .NET program to a progressive web app. Demonstrated versatility in various projects.",
     icon: LuGraduationCap,
-    date: "2019",
+    date: "2020",
   },
   {
-    title: "Front-End Developer",
-    location: "Entre Ríos, Argentina",
+    title: "Full-Stack Developer",
+    location: "Gualeguaychú, Argentina",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "Transformed e-commerce UI for optimal user experience. Integrated secure Stripe payments and automated order tracking. Created efficient custom API with Next.js. Achieved seamless mobile-desktop responsiveness, 20% conversion boost, and high-performance site. Collaborated in agile team for timely feature delivery. (Due to space constraints, detailed descriptions of additional projects are not included in this summary)",
     icon: CgWorkAlt,
-    date: "2019 - 2021",
+    date: "2020 - 2024",
   },
   {
     title: "Full-Stack Developer",
@@ -187,6 +187,6 @@ export const experiencesData = [
     description:
       "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
     icon: FaReact,
-    date: "2021 - present",
+    date: "2020 - present",
   },
 ] as const;
