@@ -20,28 +20,28 @@ export const ProjectCard = ({
 }: ProjectProps) => {
   return (
     <article className="h-[350px] w-full relative rounded-lg group">
-      <div className="relative h-[300px] z-[1] ">
+      <div className="relative h-[300px] ">
         <Image
           fill
-          className="object-cover object-center rounded-t-lg group-hover:brightness-50 transition"
+          className="object-cover object-center rounded-t-lg group-hover:brightness-50 transition hidden sm:block"
           alt="project image"
           src={imageUrl}
         />
       </div>
       <motion.div
-        className="bg-gray-50 w-full absolute bottom-0 rounded-t-xl p-4 rounded-b-lg overflow-hidden shadow-2xl z-10"
+        className="bg-gray-50 w-full absolute bottom-0 rounded-t-xl p-4 rounded-b-lg overflow-hidden shadow-2xl !min-h-[270px] sm:!min-h-[100px] dark:text-white dark:bg-gray-900/90 "
         initial={{
           height: "100px",
         }}
         whileHover={{
-          height: "230px",
+          height: "270px",
         }}
       >
         <h3 className="text-2xl font-semibold">{title}</h3>
         <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
           {description}
         </p>
-        <ul className="flex flex-wrap py-2 gap-2 sm:mt-auto">
+        <ul className="flex-wrap py-2 gap-2 sm:mt-auto hidden sm:flex">
           {tags.map((tag, index) => (
             <li
               className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
@@ -51,7 +51,7 @@ export const ProjectCard = ({
             </li>
           ))}
         </ul>
-        <div className="flex items-center self-end">
+        <div className="py-2 sm:py-0 flex items-center self-end">
           <Button variant="outline" className="w-full rounded-r-none">
             <FaGithub className="mr-2 " size={18} />
             <Link href={githubUrl} target="_blank">
