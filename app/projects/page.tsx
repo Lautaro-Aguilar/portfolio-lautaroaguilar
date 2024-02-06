@@ -1,5 +1,12 @@
 import { projectsData } from "@/lib/data";
 import { ProjectCard } from "./_components/project-card";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Lautaro Aguilar Projects",
+  description:
+    "Here are some of the projects I've worked on. I'm always looking for new opportunities and challenges. I'm open to work and collaborate on new projects. Feel free to contact me.",
+};
 
 const ProjectsPage = () => {
   return (
