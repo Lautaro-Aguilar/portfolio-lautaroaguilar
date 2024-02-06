@@ -31,6 +31,35 @@ export const links = [
   },
 ] as const;
 
+export const featuredProjectsData = [
+  {
+    title: "Place4Stream",
+    description:
+      "Developed Twitch clone with RTMP/WHIP streaming, authentication, real-time chat, follower system, live stats, blocking, streamer dashboard, and more.",
+    tags: ["Next.js", "Prisma", "WebSockets", "MySQL", "Authentication"],
+    imageUrl: "/place4stream.webp",
+    href: "https://place4stream.vercel.app/",
+    githubUrl: "https://github.com/Lautaro-Aguilar/place4stream",
+  },
+  {
+    title: "Place4Notes",
+    description:
+      "Developed full-stack Trello clone with authentication, organizations, boards, lists, cards, activity logs, Unsplash integration, Stripe subscription, and MySQL database.",
+    tags: ["Next.js", "MySQL", "Clerk", "Tailwind", "Prisma"],
+    imageUrl: "/place4notes.webp",
+    href: "https://place4notes.vercel.app/",
+    githubUrl: "https://github.com/Lautaro-Aguilar/place4notes",
+  },
+  {
+    title: "Place4Clothes",
+    description: "Online store to buy clothes with ordering system.",
+    tags: ["Next.js", "Prisma", "ServerActions", "Stripe", "Zustand"],
+    imageUrl: "/place4clothes.webp",
+    href: "https://place4clothes.vercel.app/",
+    githubUrl: "https://github.com/Lautaro-Aguilar/place4clothes",
+  },
+];
+
 export const projectsData = [
   {
     title: "Youtube Clon",
@@ -53,12 +82,66 @@ export const projectsData = [
   {
     title: "Full Stack E-Commerce - Shop",
     description:
-      "Crafted a responsive web page with organized categories, detailed product info, and seamless Stripe-integrated checkout",
+      "Developed a responsive web page with organized categories, detailed product info, and seamless Stripe-integrated checkout",
     tags: ["Next.js", "Zustand", "TailwindCSS", "Axios", "Stripe"],
     imageUrl: "/ecommercestore.webp",
     href: "https://ecommerce-store-zeta-eight.vercel.app/",
     githubUrl:
       "https://github.com/Lautaro-Aguilar/fullStack-ecommerce/tree/main/ecommerce-store",
+  },
+  {
+    title: "Full Stack E-Commerce - Admin",
+    description:
+      "Admin dashboard, CMS, and store control, supporting multiple vendors and stores. Features category, product, filter, and billboard management, image uploads and analytics",
+    tags: ["Next.js", "Clerk", "Prisma", "API", "Stripe"],
+    imageUrl: "/ecommerceadmin.webp",
+    href: "https://full-stack-ecommerce-kappa.vercel.app/",
+    githubUrl:
+      "https://github.com/Lautaro-Aguilar/fullStack-ecommerce/tree/main/ecommerce-admin",
+  },
+  {
+    title: "Next Auth v5",
+    description:
+      "Implemented robust user authentication system with 2FA, forgot password, email verification, OAuth login, roles, and user-friendly components for seamless user experience.",
+    tags: ["Next.js", "RHF", "NextAuth", "Token", "Prisma"],
+    imageUrl: "/nextauthv5.webp",
+    href: "https://auth-lautaroaguilar.vercel.app/",
+    githubUrl: "https://github.com/Lautaro-Aguilar/next-auth-v5",
+  },
+  {
+    title: "Place4Notes",
+    description:
+      "Developed full-stack Trello clone with authentication, organizations, boards, lists, cards, activity logs, Unsplash integration, Stripe subscription, and MySQL database.",
+    tags: ["Next.js", "MySQL", "Clerk", "Tailwind", "Prisma"],
+    imageUrl: "/place4notes.webp",
+    href: "https://place4notes.vercel.app/",
+    githubUrl: "https://github.com/Lautaro-Aguilar/place4notes",
+  },
+  {
+    title: "Place4Form",
+    description:
+      "Built a responsive PageForm app with drag-and-drop designer, customizable fields, preview, shareable URL, and submission/validation features.",
+    tags: ["Next.js", "Prisma", "ServerActions", "Dnd-kit", "Shadcn"],
+    imageUrl: "/place4form.webp",
+    href: "https://place4form.vercel.app/",
+    githubUrl: "https://github.com/Lautaro-Aguilar/place4form",
+  },
+  {
+    title: "Place4Clothes",
+    description: "Online store to buy clothes with ordering system.",
+    tags: ["Next.js", "Prisma", "ServerActions", "Stripe", "Zustand"],
+    imageUrl: "/place4clothes.webp",
+    href: "https://place4clothes.vercel.app/",
+    githubUrl: "https://github.com/Lautaro-Aguilar/place4clothes",
+  },
+  {
+    title: "Place4Stream",
+    description:
+      "Developed Twitch clone with RTMP/WHIP streaming, authentication, real-time chat, follower system, live stats, blocking, streamer dashboard, and more.",
+    tags: ["Next.js", "Prisma", "WebSockets", "MySQL", "Authentication"],
+    imageUrl: "/place4stream.webp",
+    href: "https://place4stream.vercel.app/",
+    githubUrl: "https://github.com/Lautaro-Aguilar/place4stream",
   },
 ] as const;
 

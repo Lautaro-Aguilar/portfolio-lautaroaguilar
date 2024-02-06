@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import SectionHeading from "./section-heading";
 import Project from "./project";
 
-import { projectsData } from "@/lib/data";
+import { featuredProjectsData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { Button } from "@/components/ui/button";
 
@@ -15,9 +15,9 @@ export default function Projects() {
 
   return (
     <section ref={ref} id="projects" className="scroll-mt-28 mb-28">
-      <SectionHeading>My projects</SectionHeading>
+      <SectionHeading>Featured Projects</SectionHeading>
       <div>
-        {projectsData.slice(0, 3).map((project, index) => (
+        {featuredProjectsData.map((project, index) => (
           <React.Fragment key={index}>
             <Project {...project} />
           </React.Fragment>
