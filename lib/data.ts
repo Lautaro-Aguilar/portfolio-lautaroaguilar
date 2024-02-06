@@ -33,22 +33,32 @@ export const links = [
 
 export const projectsData = [
   {
-    title: "Test",
-    description: "Test",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: "https://via.placeholder.com/150",
+    title: "Youtube Clon",
+    description:
+      "Developed YouTube clone with a modern, responsive UI. Integrated RapidAPI for seamless channel search, real-time updates and video playback.",
+    tags: ["React", "Vite", "Typescript", "RapidAPI", "TailwindCSS"],
+    imageUrl: "/ytclon.webp",
+    href: "https://ytclonlautaroaguilar.netlify.app",
+    githubUrl: "https://github.com/Lautaro-Aguilar/youtube-clone",
   },
   {
-    title: "Test",
-    description: "Test",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: "https://via.placeholder.com/150",
+    title: "Full stack E-Commerce",
+    description:
+      "Crafted a responsive ecommerce with modern design, CMS for on-the-go product management, advanced cart features, and crucial Stripe integration for real payments.",
+    tags: ["React", "TypeScript", "Next.js", "Sanity", "Stripe"],
+    imageUrl: "/ecommercesanity.webp",
+    href: "https://ecommerce-nextjs-one-sable.vercel.app/",
+    githubUrl: "https://github.com/Lautaro-Aguilar/ecommerce-nextjs",
   },
   {
-    title: "Test",
-    description: "Test",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: "https://via.placeholder.com/150",
+    title: "Full Stack E-Commerce - Shop",
+    description:
+      "Crafted a responsive web page with organized categories, detailed product info, and seamless Stripe-integrated checkout",
+    tags: ["Next.js", "Zustand", "TailwindCSS", "Axios", "Stripe"],
+    imageUrl: "/ecommercestore.webp",
+    href: "https://ecommerce-store-zeta-eight.vercel.app/",
+    githubUrl:
+      "https://github.com/Lautaro-Aguilar/fullStack-ecommerce/tree/main/ecommerce-store",
   },
 ] as const;
 

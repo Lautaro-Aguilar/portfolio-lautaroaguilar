@@ -6,10 +6,14 @@ import clsx from "clsx";
 
 import { links } from "@/lib/data";
 import { useActiveSectionStore } from "@/store/use-active-section";
+import { usePathname } from "next/navigation";
+import ProjectsHeader from "@/app/projects/_components/header";
 
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionStore();
+  const pathname = usePathname();
+  if (pathname === "/projects") return <ProjectsHeader />;
 
   return (
     <header className="z-[999] relative">
