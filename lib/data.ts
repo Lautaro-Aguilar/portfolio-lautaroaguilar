@@ -51,12 +51,13 @@ export const featuredProjectsData = [
     githubUrl: "https://github.com/Lautaro-Aguilar/place4notes",
   },
   {
-    title: "Place4Clothes",
-    description: "Online store to buy clothes with ordering system.",
-    tags: ["Next.js", "Prisma", "ServerActions", "Stripe", "Zustand"],
-    imageUrl: "/place4clothes.webp",
-    href: "https://place4clothes.vercel.app/",
-    githubUrl: "https://github.com/Lautaro-Aguilar/place4clothes",
+    title: "Next Auth v5",
+    description:
+      "Implemented robust user authentication system with 2FA, forgot password, email verification, OAuth login, roles, and user-friendly components for seamless user experience.",
+    tags: ["Next.js", "RHF", "NextAuth", "Token", "Prisma"],
+    imageUrl: "/nextauthv5.webp",
+    href: "https://auth-lautaroaguilar.vercel.app/",
+    githubUrl: "https://github.com/Lautaro-Aguilar/next-auth-v5",
   },
 ];
 
