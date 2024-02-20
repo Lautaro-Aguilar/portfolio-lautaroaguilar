@@ -60,7 +60,7 @@ export default function ScrollCursor({
       />
       <m.div
         ref={cursorLabel}
-        className={`dark:text-white text-purple-950 font-bold text-lg w-[80px] h-[80px] rounded-full bg-transparent uppercase absolute ${
+        className={`dark:text-white text-purple-950 font-bold w-[80px] h-[80px] rounded-full bg-transparent uppercase absolute ${
           zIndex || "z-30"
         } flex items-center justify-center text-[12px] tracking-[0.84px] pointer-events-none`}
         variants={animationVariant}
