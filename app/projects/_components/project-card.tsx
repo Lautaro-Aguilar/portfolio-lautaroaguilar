@@ -7,6 +7,7 @@ import { ExternalLink } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { projectsData } from "@/lib/data";
+import { PinContainer } from "@/components/ui/3d-pin";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -19,8 +20,37 @@ export const ProjectCard = ({
   title,
 }: ProjectProps) => {
   return (
-    <article className="h-[350px] w-full relative rounded-lg group">
-      <div className="relative h-[300px] ">
+    <article className="w-full h-[400px]">
+      <PinContainer title={title} href={href} className="w">
+        <div className="flex basis-full flex-col p-2 gap-2 tracking-tight text-slate-100/50 sm:basis-1/2 w-[300px] md:w-[350px] h-[20rem] ">
+          <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-primary">
+            {title}
+          </h3>
+          <div className="text-base !m-0 !p-0 font-normal">
+            <span className="text-primary/80 ">{description}</span>
+          </div>
+          <div className="relative h-[300px] w-full ">
+            <Image
+              fill
+              className="object-cover object-center rounded-t-lg group-hover:brightness-50 transition"
+              alt="project image"
+              src={imageUrl}
+            />
+          </div>
+        </div>
+        <Button variant="outline" className="w-full p-2">
+          <FaGithub className="mr-2 " size={18} />
+          <Link href={githubUrl} target="_blank">
+            View code
+          </Link>
+        </Button>
+      </PinContainer>
+    </article>
+  );
+};
+
+{
+  /* <div className="relative h-[300px] ">
         <Image
           fill
           className="object-cover object-center rounded-t-lg group-hover:brightness-50 transition hidden sm:block"
@@ -65,7 +95,5 @@ export const ProjectCard = ({
             </Link>
           </Button>
         </div>
-      </motion.div>
-    </article>
-  );
-};
+      </motion.div> */
+}

@@ -1,6 +1,7 @@
 import { projectsData } from "@/lib/data";
 import { ProjectCard } from "./_components/project-card";
 import { Metadata } from "next";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 
 export const metadata: Metadata = {
   title: "Lautaro Aguilar Projects",
@@ -10,9 +11,9 @@ export const metadata: Metadata = {
 
 const ProjectsPage = () => {
   return (
-    <section className="px-4 flex flex-wrap">
+    <section className="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 py-28 sm:pt-36">
       {projectsData.map((project, index) => (
-        <div className="lg:w-1/4 md:w-1/2 p-4 w-full" key={index}>
+        <div className="w-full" key={index}>
           <ProjectCard {...project} />
         </div>
       ))}

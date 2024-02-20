@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { HiDownload } from "react-icons/hi";
@@ -9,113 +8,116 @@ import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionStore } from "@/store/use-active-section";
+import { LampContainer } from "./ui/lamp";
+import { useEffect, useState } from "react";
+import ScrollCursor from "./ui/scroll-cursor";
+import { cursorAnimation } from "@/lib/animations";
+import { useMediaQuery } from "usehooks-ts";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionStore(
     (state) => state
   );
+  const [isCursorActive, setIsCursorActive] = useState(false);
+
+  const isMatch = useMediaQuery("(min-width: 768px)");
 
   return (
     <section
       ref={ref}
       id="home"
-      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
+      className="w-screen text-center sm:mb-0 scroll-mt-[100rem] relative"
+      onMouseEnter={() => setIsCursorActive(true)}
+      onMouseLeave={() => setIsCursorActive(false)}
     >
-      <div className="flex items-center justify-center">
-        <div className="relative">
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              type: "tween",
-              duration: 0.2,
-            }}
-          >
-            <Image
-              src="/profile.jpg"
-              alt="Ricardo portrait"
-              width="192"
-              height="192"
-              quality="95"
-              priority={true}
-              className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
-            />
-          </motion.div>
-
-          <motion.span
-            className="absolute bottom-0 right-0 text-4xl"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              type: "spring",
-              stiffness: 125,
-              delay: 0.1,
-              duration: 0.7,
-            }}
-          >
-            👋
-          </motion.span>
-        </div>
-      </div>
-
-      <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-      >
-        <span className="font-bold">Hello, I&apos;m Lautaro.</span> I&apos;m a{" "}
-        <span className="font-bold">front-end developer</span> with{" "}
-        <span className="font-bold">2 years</span> of experience. I enjoy
-        building <span className="italic">sites & apps</span>. My focus is{" "}
-        <span className="underline">React (Next.js)</span>.
-      </motion.h1>
-
-      <motion.div
-        className="flex flex-col sm:flex-row items-center justify-center gap-4 px-4 text-lg font-medium"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.1,
-        }}
-      >
-        <Link
-          href="#contact"
-          className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
-          onClick={() => {
-            setActiveSection("Contact");
-            setTimeOfLastClick(Date.now());
+      <ScrollCursor
+        active={isCursorActive}
+        animationVariant={cursorAnimation}
+      />
+      <LampContainer>
+        <motion.h1
+          initial={{ opacity: 0.5, y: isMatch ? 100 : 100 }}
+          whileInView={{ opacity: 1, y: isMatch ? 0 : 250 }}
+          transition={{
+            delay: 0.3,
+            duration: 0.8,
+            ease: "easeInOut",
+          }}
+          className="mt-8 bg-gradient-to-b max-w-[60rem]  from-black to-gray-700 dark:from-white dark:to-gray-400 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-5xl"
+        >
+          <span className="font-bold bg-gradient-to-t from-purple-950 dark:from-purple-700 via-purple-500 dark:via-purple-500 to-purple-700 dark:to-white drop-shadow-2xl bg-clip-text text-transparent">
+            Hello, I&apos;m Lautaro,
+          </span>{" "}
+          a{" "}
+          <span className="font-bold bg-gradient-to-t from-purple-950 dark:from-purple-700 via-purple-500 dark:via-purple-500 to-purple-700 dark:to-white drop-shadow-2xl bg-clip-text text-transparent">
+            front-end developer
+          </span>{" "}
+          with{" "}
+          <span className="font-bold bg-gradient-to-t from-purple-950 dark:from-purple-700 via-purple-500 dark:via-purple-500 to-purple-700 dark:to-white drop-shadow-2xl bg-clip-text text-transparent">
+            2 years
+          </span>{" "}
+          of experience. I take pleasure in constructing{" "}
+          <span className="italic">websites & apps,</span> with a primary focus
+          on{" "}
+          <span className="underline font-bold bg-gradient-to-t from-purple-950 dark:from-purple-700 via-purple-500 dark:via-purple-500 to-purple-700 dark:to-white drop-shadow-2xl bg-clip-text text-transparent">
+            React (Next.js)
+          </span>
+          .
+        </motion.h1>
+        <motion.div
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 px-4 mt-4 text-lg font-medium"
+          initial={{ opacity: 0.5, y: isMatch ? 100 : 100 }}
+          whileInView={{ opacity: 1, y: isMatch ? 0 : 260 }}
+          transition={{
+            delay: 0.3,
+            duration: 0.8,
+            ease: "easeInOut",
           }}
         >
-          Contact me here
-          <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
-        </Link>
+          <Link
+            href="#contact"
+            onClick={() => {
+              setActiveSection("Contact");
+              setTimeOfLastClick(Date.now());
+            }}
+          >
+            <button className="relative inline-flex p-0.5 h-16 overflow-hidden rounded-full focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+              <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+              <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-200 dark:bg-slate-950 px-3 py-1 text-sm font-medium text-primary backdrop-blur-3xl ">
+                Contact me here
+              </span>
+            </button>
+          </Link>
 
-        <a
-          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-          href="/CV.pdf"
-          download
-        >
-          Download CV
-          <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
-        </a>
+          <button className="relative inline-flex p-0.5 h-16 overflow-hidden rounded-full  focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+            <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+            <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-200 dark:bg-slate-950 px-6 py-1 text-sm font-medium text-primary backdrop-blur-3xl ">
+              Download CV
+              <HiDownload className="opacity-80 ml-2 group-hover:translate-y-1 transition" />
+            </span>
+          </button>
 
-        <a
-          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://linkedin.com"
-          target="_blank"
-        >
-          <BsLinkedin />
-        </a>
-
-        <a
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://github.com"
-          target="_blank"
-        >
-          <FaGithubSquare />
-        </a>
-      </motion.div>
+          <div className="flex items-center justify-center gap-4">
+            <a href="https://github.com" target="_blank">
+              <button className="relative inline-flex p-0.5 h-16 overflow-hidden rounded-full  focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+                <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+                <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-200 dark:bg-slate-950 px-5 py-1 text-sm font-medium text-primary backdrop-blur-3xl ">
+                  <FaGithubSquare size={18} />
+                </span>
+              </button>
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+              <button className="relative inline-flex p-0.5 h-16 overflow-hidden rounded-full  focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+                <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+                <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-200 dark:bg-slate-950 px-5 py-1 text-sm font-medium text-primary backdrop-blur-3xl ">
+                  <BsLinkedin size={18} />
+                </span>
+              </button>
+            </a>
+          </div>
+        </motion.div>
+      </LampContainer>
     </section>
   );
 }

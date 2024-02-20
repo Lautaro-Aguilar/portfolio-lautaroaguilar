@@ -11,7 +11,7 @@ export default function About() {
   return (
     <motion.section
       ref={ref}
-      className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
+      className="mb-28 px-4 text-center leading-8 sm:mb-40 scroll-mt-28"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
@@ -19,7 +19,12 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        While I was studying a career as a{" "}
+        I am 20 years old and I live in{" "}
+        <span className="font-medium inline-flex gap-x-1 items-center">
+          Argentina{" "}
+          <img src="arflag.svg" alt="Argentinian Flag" className="w-4 h-3" />
+        </span>
+        , while I was studying a career as a{" "}
         <span className="font-medium">Systems Analyst</span>, I decided to learn
         fully programming. I became self-taught and learned complete{" "}
         <span className="font-medium">full-stack web development</span>.{" "}
