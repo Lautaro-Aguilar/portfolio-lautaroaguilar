@@ -1,6 +1,8 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { useRef, useState } from "react";
+import { CardBody, CardContainer, CardItem } from "./3d-card";
+import Image from "next/image";
 
 export const BentoGrid = ({
   className,
@@ -27,12 +29,14 @@ export const BentoGridItem = ({
   description,
   header,
   icon,
+  imageUrl,
 }: {
   className?: string;
   title?: string | React.ReactNode;
   description?: string | React.ReactNode;
   header?: React.ReactNode;
   icon?: React.ReactNode;
+  imageUrl: string;
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isMouseEntered, setIsMouseEntered] = useState(false);
@@ -75,5 +79,20 @@ export const BentoGridItem = ({
         </div>
       </div>
     </div>
+    /* <CardContainer>
+      <CardBody>
+        <CardItem>{title}</CardItem>
+        <CardItem>{description}</CardItem>
+        <CardItem translateZ="100" className="w-full h-52 mt-4 relative">
+          <Image
+            src={imageUrl}
+            fill
+            sizes="100%"
+            className="w-full object-cover rounded-xl group-hover/card:shadow-xl"
+            alt="thumbnail"
+          />
+        </CardItem>
+      </CardBody>
+    </CardContainer> */
   );
 };
