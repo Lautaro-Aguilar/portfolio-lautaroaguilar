@@ -146,6 +146,54 @@ export const projectsData = [
   },
 ] as const;
 
+export const projectsHero = [
+  {
+    title: "Youtube Clon",
+    thumbnail: "/ytclon.webp",
+    link: "https://ytclonlautaroaguilar.netlify.app",
+  },
+  {
+    title: "Full stack E-Commerce",
+    thumbnail: "/ecommercesanity.webp",
+    link: "https://ecommerce-nextjs-one-sable.vercel.app/",
+  },
+  {
+    title: "Full Stack E-Commerce - Shop",
+    thumbnail: "/ecommercestore.webp",
+    link: "https://ecommerce-store-zeta-eight.vercel.app/",
+  },
+  {
+    title: "Full Stack E-Commerce - Admin",
+    thumbnail: "/ecommerceadmin.webp",
+    link: "https://full-stack-ecommerce-kappa.vercel.app/",
+  },
+  {
+    title: "Next Auth v5",
+    thumbnail: "/nextauthv5.webp",
+    link: "https://auth-lautaroaguilar.vercel.app/",
+  },
+  {
+    title: "Place4Notes",
+    thumbnail: "/place4notes.webp",
+    link: "https://place4notes.vercel.app/",
+  },
+  {
+    title: "Place4Form",
+    thumbnail: "/place4form.webp",
+    link: "https://place4form.vercel.app/",
+  },
+  {
+    title: "Place4Clothes",
+    thumbnail: "/place4clothes.webp",
+    link: "https://place4clothes.vercel.app/",
+  },
+  {
+    title: "Place4Stream",
+    thumbnail: "/place4stream.webp",
+    link: "https://place4stream.vercel.app/",
+  },
+];
+
 export const skillsData = [
   "HTML",
   "CSS",
