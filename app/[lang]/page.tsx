@@ -7,7 +7,6 @@ export default async function Home({
 }: {
   params: { lang: string };
 }) {
-  console.log(lang);
   const dictionary: Dictionary = await import(
     `@/app/dictionaries/${lang}`
   ).then((m) => m.default);

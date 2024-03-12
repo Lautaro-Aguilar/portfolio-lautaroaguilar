@@ -19,4 +19,5 @@ export interface Dictionary {
     as: string;
     and: string;
   };
+  lang: string;
 }

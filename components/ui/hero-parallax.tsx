@@ -22,6 +22,8 @@ import {
   SelectValue,
 } from "./select";
 import { redirect } from "next/navigation";
+import { useIsClient } from "usehooks-ts";
+import { Skeleton } from "./skeleton";
 
 export const HeroParallax = ({
   products,
@@ -125,6 +127,7 @@ export const HeroParallax = ({
 };
 
 export const Header = ({ dictionary }: { dictionary: Dictionary }) => {
+  const isClient = useIsClient();
   return (
     <div className="!z-50">
       <CardContainer className="py-20 inter-var">
@@ -152,18 +155,22 @@ export const Header = ({ dictionary }: { dictionary: Dictionary }) => {
                 </p>
               </div>
             </div>
-            <Select
-              onValueChange={(value) => redirect(`/${value}`)}
-              defaultValue="en"
-            >
-              <SelectTrigger className="w-[65px]">
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="es">ES</SelectItem>
-                <SelectItem value="en">EN</SelectItem>
-              </SelectContent>
-            </Select>
+            {isClient ? (
+              <Select
+                onValueChange={(value) => redirect(`/${value}`)}
+                defaultValue={dictionary.lang}
+              >
+                <SelectTrigger className="w-[65px]">
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="es">ES</SelectItem>
+                  <SelectItem value="en">EN</SelectItem>
+                </SelectContent>
+              </Select>
+            ) : (
+              <Skeleton className="w-16 h-10" />
+            )}
           </CardItem>
           <CardItem translateZ="30" className="w-full mt-4">
             <p className="mb-3">
