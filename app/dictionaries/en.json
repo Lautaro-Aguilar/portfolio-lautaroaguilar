@@ -1,0 +1,23 @@
+{
+  "title": "Lautaro Aguilar",
+  "job": "Frontend Developer",
+  "about": {
+    "title": "I am 20 years old and I live in",
+    "stack": "My core stack is ",
+    "familiar": "I am also familiar in ",
+    "reactTesting": "with React Testing Librarys like Jest, and ",
+    "looking": "I am always looking to learn new technologies and am currently looking for a ",
+    "position": "full-time position ",
+    "job": "as a web developer"
+  },
+  "buttons": {
+    "cv": "Download CV",
+    "contact": "Contact me"
+  },
+  "words": {
+    "with": "with",
+    "as": "as",
+    "and": "and"
+  },
+  "lang": "en"
+}

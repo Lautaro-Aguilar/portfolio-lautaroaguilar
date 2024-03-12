@@ -1,0 +1,23 @@
+{
+  "title": "Lautaro Aguilar",
+  "job": "Frontend Developer",
+  "about": {
+    "title": "Tengo 20 años y actualmente vivo en ",
+    "stack": "Mis habilidades principales son ",
+    "familiar": "También tengo conocimientos en ",
+    "reactTesting": "con Librerias de Testeos como Jest, trabajo con ",
+    "looking": "Siempre estoy buscando aprender nuevas tecnologías y reforzando el conocimiento de las que ya tengo, actualmente estoy buscando una posición ",
+    "position": "full-time",
+    "job": "como desarrollador web"
+  },
+  "buttons": {
+    "cv": "Descargar CV",
+    "contact": "Contactarme"
+  },
+  "words": {
+    "with": "con",
+    "as": "como",
+    "and": "y"
+  },
+  "lang": "es"
+}
